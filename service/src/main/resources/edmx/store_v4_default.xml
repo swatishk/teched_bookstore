@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasisopen.
+org/odata/ns/edmx">
+<edmx:DataServices>
+<Schema Namespace="store" Alias="store"
+xmlns="http://docs.oasis-open.org/odata/ns/edm">
+<EntityContainer Name="EntityContainer">
+<EntitySet Name="Book" EntityType="store.Book"/>
+</EntityContainer>
+<EntityType Name="Book">
+<Key>
+<PropertyRef Name="bookId"/>
+</Key>
+<Property Name="bookId" Type="Edm.Int32"
+Nullable="false"/>
+<Property Name="bookName" Type="Edm.String"
+MaxLength="100" Nullable="false"/>
+<Property Name="isbn" Type="Edm.String"
+MaxLength="20" Nullable="false"/>
+<Property Name="price" Type="Edm.Int32"
+Nullable="false"/>
+<Property Name="priceCurrency" Type="Edm.String"
+MaxLength="10" Nullable="false"/>
+<Property Name="authorName" Type="Edm.String"
+MaxLength="100"/>
+</EntityType>
+</Schema>
+</edmx:DataServices>
+</edmx:Edmx>

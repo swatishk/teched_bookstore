@@ -1,0 +1,11 @@
+{ 
+  "format_version": 1, 
+  "imports": 
+  [ { 
+		"target_table": "store.Book", 
+		"source_data" : { "data_type" : "CSV", "file_name" : "books.csv", "has_header" : true }, 
+		"import_settings" : { "import_columns" : [ "bookId", "bookName","isbn","price","priceCurrency", "authorName" ] }, 
+		"column_mappings" : { "bookId" : 1, "bookName" : 2, "isbn" : 3, "price": 4, "priceCurrency" : 5, "authorName": 6 	} 
+	} 
+  ] 
+}

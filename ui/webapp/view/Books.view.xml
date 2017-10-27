@@ -1,0 +1,46 @@
+<mvc:View controllerName="book.ui.controller.Books" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m">
+	<App>
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<Table id="booksTable" inset="false" items="{path: '/Book'}" width="auto">
+						<headerToolbar>
+							<Toolbar width="100%" id="__toolbar3">
+								<content>
+									<Bar id="__bar1">
+										<contentLeft>
+											<Title text="{i18n>tableTitle}" width="100%" id="__title1"/>
+										</contentLeft>
+									</Bar>
+								</content>
+							</Toolbar>
+						</headerToolbar>
+						<columns>
+							<Column>
+								<Text text="{i18n>bookColumnHeader}"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true">
+								<Text text="{i18n>authorColumnHeader}"/>
+							</Column>
+							<Column>
+								<Text text="{i18n>priceColumnHeader}"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem>
+								<cells>
+									<ObjectIdentifier title="{bookName}" text="{isbn}"/>
+									<Text text="{authorName}"/>
+									<ObjectNumber
+										number="{ parts:[{path:'price'},{path:'priceCurrency'}], type: 'sap.ui.model.type.Currency', formatOptions: {showMeasure: false} }"
+										unit="{priceCurrency}"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

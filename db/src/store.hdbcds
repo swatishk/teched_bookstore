@@ -1,0 +1,12 @@
+context store {
+
+    /*@@layout{"layoutInfo":{"x":83,"y":116.5}}*/
+    entity Book {
+        key bookId        : Integer     not null;
+            bookName      : String(100) not null;
+            isbn          : String(20)  not null;
+            price         : Integer     not null;
+            priceCurrency : String(10)  not null;
+            authorName    : String(100) not null;
+    };
+};
